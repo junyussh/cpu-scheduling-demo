@@ -37,6 +37,16 @@
             ] }]"
         />
       </a-form-item>
+      <a-form-item label="長度">
+        <a-input-number
+          :min="1"
+          :max="100"
+          v-decorator="['length', { initialValue: 10,
+        rules: [
+              { required: true, message: '請輸入長度', type: 'number' },
+            ] }]"
+        />
+      </a-form-item>
       <a-form-item>
         <a-button class="add-form" type="primary" html-type="submit">加入進程</a-button>
       </a-form-item>
